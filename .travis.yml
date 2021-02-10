@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "8"
+
+sudo: false
+
+before_install:
+  - rvm install 2.3
+  - rvm use 2.3
+  - npm install
+
+script:
+  - npm run test
+
+after_script:
+  - export PROJECT_ACCESS_TOKEN=77102039711171306244052741315808265002968697445888620063
+  - export REPOSITORY_NAME=claudiareyes71/coffee-machine-javascript
+  - export COMMIT_HASH=$(git rev-parse HEAD)
+  - npm test && script/push_results

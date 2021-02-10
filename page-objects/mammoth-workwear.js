@@ -8,12 +8,10 @@ module.exports = {
     },
 
     clickNavigationItem: function(containingText) {
-
         return helpers.clickHiddenElement(page.mammothWorkwear.elements.menuItem, containingText);
     },
 
     clickProductItem: function(containingText) {
-
         return helpers.clickHiddenElement(page.mammothWorkwear.elements.productItem, containingText);
     },
 
